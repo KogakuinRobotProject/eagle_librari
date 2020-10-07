@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -73,91 +73,31 @@
 </layers>
 <library>
 <packages>
-<package name="SOIC8">
-<smd name="P$1" x="-2.7" y="1.905" dx="1.55" dy="0.6" layer="1"/>
-<smd name="P$2" x="-2.7" y="0.635" dx="1.55" dy="0.6" layer="1"/>
-<smd name="P$3" x="-2.7" y="-0.635" dx="1.55" dy="0.6" layer="1"/>
-<smd name="P$4" x="-2.7" y="-1.905" dx="1.55" dy="0.6" layer="1"/>
-<smd name="P$5" x="2.7" y="-1.905" dx="1.55" dy="0.6" layer="1"/>
-<smd name="P$6" x="2.7" y="-0.635" dx="1.55" dy="0.6" layer="1"/>
-<smd name="P$7" x="2.7" y="0.635" dx="1.55" dy="0.6" layer="1"/>
-<smd name="P$8" x="2.7" y="1.905" dx="1.55" dy="0.6" layer="1"/>
-<wire x1="-1.651" y1="2.54" x2="-1.651" y2="-2.54" width="0.127" layer="21"/>
-<wire x1="-1.651" y1="-2.54" x2="1.651" y2="-2.54" width="0.127" layer="21"/>
-<wire x1="1.651" y1="-2.54" x2="1.651" y2="2.54" width="0.127" layer="21"/>
-<wire x1="1.651" y1="2.54" x2="-1.651" y2="2.54" width="0.127" layer="21"/>
-<circle x="-1.016" y="1.905" radius="0.359209375" width="0.127" layer="21"/>
-<rectangle x1="-1.95" y1="-2.45" x2="1.95" y2="2.45" layer="39"/>
+<package name="C1608">
+<smd name="P$1" x="-0.825" y="0" dx="0.85" dy="0.7" layer="1"/>
+<smd name="P$2" x="0.825" y="0" dx="0.85" dy="0.7" layer="1"/>
+<rectangle x1="-0.8" y1="-0.4" x2="0.8" y2="0.4" layer="39"/>
 </package>
 </packages>
 <symbols>
-<symbol name="MCP2561">
-<pin name="TXD" x="-12.7" y="7.62" length="middle"/>
-<pin name="VSS" x="-12.7" y="2.54" length="middle"/>
-<pin name="VDD" x="-12.7" y="-2.54" length="middle"/>
-<pin name="RXD" x="-12.7" y="-7.62" length="middle"/>
-<pin name="SPLIT" x="12.7" y="-7.62" length="middle" rot="R180"/>
-<pin name="CANL" x="12.7" y="-2.54" length="middle" rot="R180"/>
-<pin name="CANH" x="12.7" y="2.54" length="middle" rot="R180"/>
-<pin name="STBY" x="12.7" y="7.62" length="middle" rot="R180"/>
-<wire x1="-7.62" y1="10.16" x2="-7.62" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="-10.16" x2="7.62" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="7.62" y1="-10.16" x2="7.62" y2="10.16" width="0.254" layer="94"/>
-<wire x1="7.62" y1="10.16" x2="-7.62" y2="10.16" width="0.254" layer="94"/>
-</symbol>
-<symbol name="MCP2562">
-<pin name="TXD" x="-12.7" y="7.62" length="middle"/>
-<pin name="VSS" x="-12.7" y="2.54" length="middle"/>
-<pin name="VDD" x="-12.7" y="-2.54" length="middle"/>
-<pin name="RXD" x="-12.7" y="-7.62" length="middle"/>
-<pin name="VIO" x="12.7" y="-7.62" length="middle" rot="R180"/>
-<pin name="CANL" x="12.7" y="-2.54" length="middle" rot="R180"/>
-<pin name="CANH" x="12.7" y="2.54" length="middle" rot="R180"/>
-<pin name="STBY" x="12.7" y="7.62" length="middle" rot="R180"/>
-<wire x1="-7.62" y1="10.16" x2="-7.62" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="-10.16" x2="7.62" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="7.62" y1="-10.16" x2="7.62" y2="10.16" width="0.254" layer="94"/>
-<wire x1="7.62" y1="10.16" x2="-7.62" y2="10.16" width="0.254" layer="94"/>
+<symbol name="MLCC">
+<pin name="P$1" x="-3.81" y="0" visible="off" length="short"/>
+<pin name="P$2" x="3.81" y="0" visible="off" length="short" rot="R180"/>
+<wire x1="-1.27" y1="2.54" x2="-1.27" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="1.27" y1="2.54" x2="1.27" y2="-2.54" width="0.254" layer="94"/>
+<text x="2.54" y="-3.81" size="1.4224" layer="94">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="MCP2561">
+<deviceset name="MLCC" uservalue="yes">
 <gates>
-<gate name="G$1" symbol="MCP2561" x="0" y="0"/>
+<gate name="G$1" symbol="MLCC" x="0" y="0"/>
 </gates>
 <devices>
-<device name="MCP2561-SN" package="SOIC8">
+<device name="1608" package="C1608">
 <connects>
-<connect gate="G$1" pin="CANH" pad="P$7"/>
-<connect gate="G$1" pin="CANL" pad="P$6"/>
-<connect gate="G$1" pin="RXD" pad="P$4"/>
-<connect gate="G$1" pin="SPLIT" pad="P$5"/>
-<connect gate="G$1" pin="STBY" pad="P$8"/>
-<connect gate="G$1" pin="TXD" pad="P$1"/>
-<connect gate="G$1" pin="VDD" pad="P$2"/>
-<connect gate="G$1" pin="VSS" pad="P$3"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="MCP2562">
-<gates>
-<gate name="G$1" symbol="MCP2562" x="0" y="0"/>
-</gates>
-<devices>
-<device name="MCP2561-SN" package="SOIC8">
-<connects>
-<connect gate="G$1" pin="CANH" pad="P$7"/>
-<connect gate="G$1" pin="CANL" pad="P$6"/>
-<connect gate="G$1" pin="RXD" pad="P$4"/>
-<connect gate="G$1" pin="STBY" pad="P$8"/>
-<connect gate="G$1" pin="TXD" pad="P$1"/>
-<connect gate="G$1" pin="VDD" pad="P$3"/>
-<connect gate="G$1" pin="VIO" pad="P$5"/>
-<connect gate="G$1" pin="VSS" pad="P$2"/>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$2" pad="P$2"/>
 </connects>
 <technologies>
 <technology name=""/>
