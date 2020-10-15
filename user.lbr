@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.2">
+<eagle version="9.4.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -158,9 +158,8 @@
 <wire x1="9.7" y1="-0.1" x2="0" y2="-0.1" width="0.127" layer="21"/>
 <wire x1="0" y1="2.7" x2="0" y2="1.4" width="0.127" layer="21" curve="-180"/>
 <circle x="0.65" y="0.65" radius="0.230865625" width="0.127" layer="21"/>
-<text x="11.557" y="-0.481" size="1.27" layer="51" rot="R90">A3921</text>
+<text x="2.44" y="1.27" size="1.27" layer="21">A3921</text>
 <smd name="PAD" x="4.906" y="1.942" dx="5" dy="3" layer="1"/>
-<rectangle x1="0" y1="-0.127" x2="9.779" y2="3.937" layer="39"/>
 </package>
 <package name="TLP2105">
 <wire x1="0" y1="0" x2="5.1" y2="0" width="0.127" layer="21"/>
@@ -1006,6 +1005,38 @@ Source: PANASONIC .. aoc0000ce1.pdf</description>
 <rectangle x1="2.2606" y1="-1.0922" x2="2.794" y2="1.0922" layer="51"/>
 <rectangle x1="-1.35" y1="-1.9" x2="-0.8" y2="1.9" layer="51"/>
 </package>
+<package name="TO-92_FET" urn="urn:adsk.eagle:footprint:28467/1" locally_modified="yes">
+<wire x1="-2.0946" y1="-1.651" x2="-2.6549" y2="-0.254" width="0.127" layer="21" curve="-32.781"/>
+<wire x1="-2.6549" y1="-0.254" x2="-0.7863" y2="2.5485" width="0.127" layer="21" curve="-78.3185"/>
+<wire x1="0.7863" y1="2.5484" x2="2.0945" y2="-1.651" width="0.127" layer="21" curve="-111.1"/>
+<wire x1="-2.0945" y1="-1.651" x2="2.0945" y2="-1.651" width="0.127" layer="21"/>
+<wire x1="-2.2537" y1="-0.254" x2="-0.2863" y2="-0.254" width="0.127" layer="27"/>
+<wire x1="-2.6549" y1="-0.254" x2="-2.2537" y2="-0.254" width="0.127" layer="21"/>
+<wire x1="-0.2863" y1="-0.254" x2="0.2863" y2="-0.254" width="0.127" layer="21"/>
+<wire x1="2.2537" y1="-0.254" x2="2.6549" y2="-0.254" width="0.127" layer="21"/>
+<wire x1="0.2863" y1="-0.254" x2="2.2537" y2="-0.254" width="0.127" layer="27"/>
+<wire x1="-0.7863" y1="2.5485" x2="0.7863" y2="2.5485" width="0.127" layer="27" curve="-34.2936"/>
+<pad name="3" x="2.54" y="0" drill="0.8128" shape="octagon"/>
+<pad name="2" x="0" y="0" drill="0.8128" shape="octagon"/>
+<pad name="1" x="-2.54" y="0" drill="0.8128" shape="octagon"/>
+<text x="3.175" y="0.635" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="3.175" y="-1.27" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+<text x="-0.635" y="0.635" size="1.27" layer="27" ratio="10">2</text>
+<text x="-2.159" y="0" size="1.27" layer="27" ratio="10">1</text>
+<text x="1.143" y="0" size="1.27" layer="27" ratio="10">3</text>
+</package>
+<package name="ZH_6P_L">
+<wire x1="0" y1="4.6" x2="10.5" y2="4.6" width="0.127" layer="21"/>
+<wire x1="0" y1="-1.4" x2="10.5" y2="-1.4" width="0.127" layer="21"/>
+<pad name="PIN1" x="1.5" y="0" drill="0.75" shape="square"/>
+<pad name="PIN2" x="3" y="0" drill="0.75" shape="square"/>
+<pad name="PIN3" x="4.5" y="0" drill="0.75" shape="square"/>
+<pad name="PIN4" x="6" y="0" drill="0.75" shape="square"/>
+<pad name="PIN5" x="7.5" y="0" drill="0.75" shape="square"/>
+<wire x1="0" y1="4.6" x2="0" y2="-1.4" width="0.127" layer="21"/>
+<wire x1="10.5" y1="4.6" x2="10.5" y2="-1.4" width="0.127" layer="21"/>
+<pad name="PIN6" x="9" y="0" drill="0.75" shape="square"/>
+</package>
 </packages>
 <symbols>
 <symbol name="LBR127HLD">
@@ -1079,39 +1110,39 @@ Source: PANASONIC .. aoc0000ce1.pdf</description>
 <text x="-5.08" y="5.08" size="1.778" layer="94">NJM2360</text>
 </symbol>
 <symbol name="A3921">
-<pin name="VDRAIN" x="-20.32" y="17.78" visible="pin" length="middle"/>
-<pin name="LSS" x="-20.32" y="15.24" visible="pin" length="middle"/>
-<pin name="GLB" x="-20.32" y="12.7" visible="pin" length="middle"/>
-<pin name="SB" x="-20.32" y="10.16" visible="pin" length="middle"/>
-<pin name="GHB" x="-20.32" y="7.62" visible="pin" length="middle"/>
-<pin name="CB" x="-20.32" y="5.08" visible="pin" length="middle"/>
-<pin name="NC@2" x="-20.32" y="2.54" visible="pin" length="middle" direction="nc"/>
-<pin name="VREG" x="-20.32" y="0" visible="pin" length="middle"/>
-<pin name="CA" x="-20.32" y="-2.54" visible="pin" length="middle"/>
-<pin name="GHA" x="-20.32" y="-5.08" visible="pin" length="middle"/>
-<pin name="SA" x="-20.32" y="-7.62" visible="pin" length="middle"/>
-<pin name="GLA" x="-20.32" y="-10.16" visible="pin" length="middle"/>
-<pin name="VBB" x="-20.32" y="-12.7" visible="pin" length="middle"/>
-<pin name="NC@1" x="-20.32" y="-15.24" visible="pin" length="middle" direction="nc"/>
-<pin name="VDSTH" x="22.86" y="17.78" visible="pin" length="middle" rot="R180"/>
-<pin name="RDEAD" x="22.86" y="15.24" visible="pin" length="middle" rot="R180"/>
-<pin name="FF2" x="22.86" y="12.7" visible="pin" length="middle" rot="R180"/>
-<pin name="FF1" x="22.86" y="10.16" visible="pin" length="middle" rot="R180"/>
-<pin name="RESET" x="22.86" y="7.62" visible="pin" length="middle" rot="R180"/>
-<pin name="PWMH" x="22.86" y="5.08" visible="pin" length="middle" rot="R180"/>
-<pin name="PWML" x="22.86" y="2.54" visible="pin" length="middle" rot="R180"/>
-<pin name="SR" x="22.86" y="0" visible="pin" length="middle" rot="R180"/>
-<pin name="V5" x="22.86" y="-2.54" visible="pin" length="middle" rot="R180"/>
-<pin name="PHASE" x="22.86" y="-5.08" visible="pin" length="middle" rot="R180"/>
-<pin name="NC@3" x="22.86" y="-7.62" visible="pin" length="middle" direction="nc" rot="R180"/>
-<pin name="GND@1" x="22.86" y="-10.16" visible="pin" length="middle" rot="R180"/>
-<pin name="CP1" x="22.86" y="-12.7" visible="pin" length="middle" rot="R180"/>
-<pin name="CP2" x="22.86" y="-15.24" visible="pin" length="middle" rot="R180"/>
-<wire x1="-15.24" y1="20.32" x2="17.78" y2="20.32" width="0.254" layer="94"/>
-<wire x1="17.78" y1="20.32" x2="17.78" y2="-17.78" width="0.254" layer="94"/>
-<wire x1="17.78" y1="-17.78" x2="-15.24" y2="-17.78" width="0.254" layer="94"/>
-<wire x1="-15.24" y1="-17.78" x2="-15.24" y2="20.32" width="0.254" layer="94"/>
-<text x="7.62" y="-20.32" size="1.27" layer="94">&gt;NAME</text>
+<pin name="PIN1_VDRAIN" x="-20.32" y="17.78" length="middle"/>
+<pin name="PIN2_LSS" x="-20.32" y="15.24" length="middle"/>
+<pin name="PIN3_GLB" x="-20.32" y="12.7" length="middle"/>
+<pin name="PIN4_SB" x="-20.32" y="10.16" length="middle"/>
+<pin name="PIN5_GHB" x="-20.32" y="7.62" length="middle"/>
+<pin name="PIN6_CB" x="-20.32" y="5.08" length="middle"/>
+<pin name="PIN7_NC" x="-20.32" y="2.54" length="middle"/>
+<pin name="PIN8_VREG" x="-20.32" y="0" length="middle"/>
+<pin name="PIN9_CA" x="-20.32" y="-2.54" length="middle"/>
+<pin name="PIN10_GHA" x="-20.32" y="-5.08" length="middle"/>
+<pin name="PIN11_SA" x="-20.32" y="-7.62" length="middle"/>
+<pin name="PIN12_GLA" x="-20.32" y="-10.16" length="middle"/>
+<pin name="PIN13_VBB" x="-20.32" y="-12.7" length="middle"/>
+<pin name="PIN14_NC" x="-20.32" y="-15.24" length="middle"/>
+<pin name="PIN28_VDSTH" x="22.86" y="17.78" length="middle" rot="R180"/>
+<pin name="PIN27_RDEAD" x="22.86" y="15.24" length="middle" rot="R180"/>
+<pin name="PIN26_FF2" x="22.86" y="12.7" length="middle" rot="R180"/>
+<pin name="PIN25_FF1" x="22.86" y="10.16" length="middle" rot="R180"/>
+<pin name="PIN24_RESET" x="22.86" y="7.62" length="middle" rot="R180"/>
+<pin name="PIN23_PWMH" x="22.86" y="5.08" length="middle" rot="R180"/>
+<pin name="PIN22_PWML" x="22.86" y="2.54" length="middle" rot="R180"/>
+<pin name="PIN21_SR" x="22.86" y="0" length="middle" rot="R180"/>
+<pin name="PIN20_V5" x="22.86" y="-2.54" length="middle" rot="R180"/>
+<pin name="PIN19_PHASE" x="22.86" y="-5.08" length="middle" rot="R180"/>
+<pin name="PIN18_NC" x="22.86" y="-7.62" length="middle" rot="R180"/>
+<pin name="PIN17_GND" x="22.86" y="-10.16" length="middle" rot="R180"/>
+<pin name="PIN16_CP1" x="22.86" y="-12.7" length="middle" rot="R180"/>
+<pin name="PIN15_CP2" x="22.86" y="-15.24" length="middle" rot="R180"/>
+<wire x1="-17.78" y1="20.32" x2="20.32" y2="20.32" width="0.254" layer="94"/>
+<wire x1="20.32" y1="20.32" x2="20.32" y2="-17.78" width="0.254" layer="94"/>
+<wire x1="20.32" y1="-17.78" x2="-17.78" y2="-17.78" width="0.254" layer="94"/>
+<wire x1="-17.78" y1="-17.78" x2="-17.78" y2="20.32" width="0.254" layer="94"/>
+<pin name="PAD" x="0" y="-15.24" length="middle" rot="R270"/>
 </symbol>
 <symbol name="TLP2105">
 <pin name="PIN1_ANODE1" x="-20.32" y="7.62" length="middle"/>
@@ -1866,6 +1897,44 @@ uhf帯リモコン受信用IC</description>
 <pin name="A" x="0" y="2.54" visible="pad" length="point" direction="pas" rot="R270"/>
 <pin name="C" x="0" y="-2.54" visible="pad" length="point" direction="pas" rot="R90"/>
 </symbol>
+<symbol name="TO92_FET">
+<wire x1="-2.54" y1="-2.54" x2="-1.2192" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="0.762" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="-0.762" width="0.254" layer="94"/>
+<wire x1="0" y1="3.683" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.397" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="2.54" y2="0" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="0" x2="2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="-1.397" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-3.683" width="0.254" layer="94"/>
+<wire x1="-1.143" y1="2.54" x2="-1.143" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="2.54" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="2.54" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="-2.54" x2="0" y2="-2.54" width="0.1524" layer="94"/>
+<circle x="2.54" y="-2.54" radius="0.3592" width="0" layer="94"/>
+<text x="-11.43" y="0" size="1.778" layer="96">&gt;VALUE</text>
+<text x="-11.43" y="2.54" size="1.778" layer="95">&gt;NAME</text>
+<pin name="S" x="2.54" y="-7.62" visible="off" length="middle" direction="pas" rot="R90"/>
+<pin name="G" x="-5.08" y="-2.54" visible="off" length="short" direction="pas"/>
+<pin name="D" x="2.54" y="7.62" visible="off" length="short" direction="pas" rot="R270"/>
+<polygon width="0.1524" layer="94">
+<vertex x="0.254" y="0"/>
+<vertex x="1.27" y="0.762"/>
+<vertex x="1.27" y="-0.762"/>
+</polygon>
+</symbol>
+<symbol name="ZH_6P_L">
+<pin name="PIN1" x="-12.7" y="5.08" length="middle" rot="R270"/>
+<pin name="PIN2" x="-7.62" y="5.08" length="middle" rot="R270"/>
+<pin name="PIN3" x="-2.54" y="5.08" length="middle" rot="R270"/>
+<pin name="PIN4" x="2.54" y="5.08" length="middle" rot="R270"/>
+<wire x1="-15.24" y1="2.54" x2="15.24" y2="2.54" width="0.254" layer="94"/>
+<wire x1="15.24" y1="2.54" x2="15.24" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="15.24" y1="-2.54" x2="-15.24" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-15.24" y1="-2.54" x2="-15.24" y2="2.54" width="0.254" layer="94"/>
+<pin name="PIN5" x="7.62" y="5.08" length="middle" rot="R270"/>
+<pin name="PIN6" x="12.7" y="5.08" length="middle" rot="R270"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="LBR127HLD" prefix="PHR">
@@ -1949,34 +2018,35 @@ uhf帯リモコン受信用IC</description>
 <devices>
 <device name="" package="A3921">
 <connects>
-<connect gate="G$1" pin="CA" pad="PIN9"/>
-<connect gate="G$1" pin="CB" pad="PIN6"/>
-<connect gate="G$1" pin="CP1" pad="PIN16"/>
-<connect gate="G$1" pin="CP2" pad="PIN15"/>
-<connect gate="G$1" pin="FF1" pad="PIN25"/>
-<connect gate="G$1" pin="FF2" pad="PIN26"/>
-<connect gate="G$1" pin="GHA" pad="PIN10"/>
-<connect gate="G$1" pin="GHB" pad="PIN5"/>
-<connect gate="G$1" pin="GLA" pad="PIN12"/>
-<connect gate="G$1" pin="GLB" pad="PIN3"/>
-<connect gate="G$1" pin="GND@1" pad="PAD PIN17"/>
-<connect gate="G$1" pin="LSS" pad="PIN2"/>
-<connect gate="G$1" pin="NC@1" pad="PIN14"/>
-<connect gate="G$1" pin="NC@2" pad="PIN7"/>
-<connect gate="G$1" pin="NC@3" pad="PIN18"/>
-<connect gate="G$1" pin="PHASE" pad="PIN19"/>
-<connect gate="G$1" pin="PWMH" pad="PIN23"/>
-<connect gate="G$1" pin="PWML" pad="PIN22"/>
-<connect gate="G$1" pin="RDEAD" pad="PIN27"/>
-<connect gate="G$1" pin="RESET" pad="PIN24"/>
-<connect gate="G$1" pin="SA" pad="PIN11"/>
-<connect gate="G$1" pin="SB" pad="PIN4"/>
-<connect gate="G$1" pin="SR" pad="PIN21"/>
-<connect gate="G$1" pin="V5" pad="PIN20"/>
-<connect gate="G$1" pin="VBB" pad="PIN13"/>
-<connect gate="G$1" pin="VDRAIN" pad="PIN1"/>
-<connect gate="G$1" pin="VDSTH" pad="PIN28"/>
-<connect gate="G$1" pin="VREG" pad="PIN8"/>
+<connect gate="G$1" pin="PAD" pad="PAD"/>
+<connect gate="G$1" pin="PIN10_GHA" pad="PIN10"/>
+<connect gate="G$1" pin="PIN11_SA" pad="PIN11"/>
+<connect gate="G$1" pin="PIN12_GLA" pad="PIN12"/>
+<connect gate="G$1" pin="PIN13_VBB" pad="PIN13"/>
+<connect gate="G$1" pin="PIN14_NC" pad="PIN14"/>
+<connect gate="G$1" pin="PIN15_CP2" pad="PIN15"/>
+<connect gate="G$1" pin="PIN16_CP1" pad="PIN16"/>
+<connect gate="G$1" pin="PIN17_GND" pad="PIN17"/>
+<connect gate="G$1" pin="PIN18_NC" pad="PIN18"/>
+<connect gate="G$1" pin="PIN19_PHASE" pad="PIN19"/>
+<connect gate="G$1" pin="PIN1_VDRAIN" pad="PIN1"/>
+<connect gate="G$1" pin="PIN20_V5" pad="PIN20"/>
+<connect gate="G$1" pin="PIN21_SR" pad="PIN21"/>
+<connect gate="G$1" pin="PIN22_PWML" pad="PIN22"/>
+<connect gate="G$1" pin="PIN23_PWMH" pad="PIN23"/>
+<connect gate="G$1" pin="PIN24_RESET" pad="PIN24"/>
+<connect gate="G$1" pin="PIN25_FF1" pad="PIN25"/>
+<connect gate="G$1" pin="PIN26_FF2" pad="PIN26"/>
+<connect gate="G$1" pin="PIN27_RDEAD" pad="PIN27"/>
+<connect gate="G$1" pin="PIN28_VDSTH" pad="PIN28"/>
+<connect gate="G$1" pin="PIN2_LSS" pad="PIN2"/>
+<connect gate="G$1" pin="PIN3_GLB" pad="PIN3"/>
+<connect gate="G$1" pin="PIN4_SB" pad="PIN4"/>
+<connect gate="G$1" pin="PIN5_GHB" pad="PIN5"/>
+<connect gate="G$1" pin="PIN6_CB" pad="PIN6"/>
+<connect gate="G$1" pin="PIN7_NC" pad="PIN7"/>
+<connect gate="G$1" pin="PIN8_VREG" pad="PIN8"/>
+<connect gate="G$1" pin="PIN9_CA" pad="PIN9"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -2778,7 +2848,7 @@ RS品番885-1171</description>
 </devices>
 </deviceset>
 <deviceset name="0603X4RESISTOR" prefix="R_I" uservalue="yes">
-<description>工房に落ちてたやつ...どこが作った物なのかトレランスはどうなのかとか精級は全部不明</description>
+<description>工房に落ちていた集合抵抗　トレランス、精級などふめい。金属皮膜だし基本性能いいと思う</description>
 <gates>
 <gate name="G$1" symbol="0603X4RESISTOR" x="-2.54" y="0"/>
 </gates>
@@ -2927,6 +2997,43 @@ RS品番885-1171</description>
 <connects>
 <connect gate="G$1" pin="A" pad="A"/>
 <connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TO92_FET">
+<gates>
+<gate name="G$1" symbol="TO92_FET" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="TO-92_FET">
+<connects>
+<connect gate="G$1" pin="D" pad="3"/>
+<connect gate="G$1" pin="G" pad="2"/>
+<connect gate="G$1" pin="S" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="ZH_6P_L">
+<gates>
+<gate name="G$1" symbol="ZH_6P_L" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="ZH_6P_L">
+<connects>
+<connect gate="G$1" pin="PIN1" pad="PIN1"/>
+<connect gate="G$1" pin="PIN2" pad="PIN2"/>
+<connect gate="G$1" pin="PIN3" pad="PIN3"/>
+<connect gate="G$1" pin="PIN4" pad="PIN4"/>
+<connect gate="G$1" pin="PIN5" pad="PIN5"/>
+<connect gate="G$1" pin="PIN6" pad="PIN6"/>
 </connects>
 <technologies>
 <technology name=""/>
