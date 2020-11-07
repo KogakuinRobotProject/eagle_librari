@@ -9,6 +9,20 @@
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
+<layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
+<layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
+<layer number="6" name="Route6" color="1" fill="8" visible="no" active="no"/>
+<layer number="7" name="Route7" color="4" fill="8" visible="no" active="no"/>
+<layer number="8" name="Route8" color="1" fill="2" visible="no" active="no"/>
+<layer number="9" name="Route9" color="4" fill="2" visible="no" active="no"/>
+<layer number="10" name="Route10" color="1" fill="7" visible="no" active="no"/>
+<layer number="11" name="Route11" color="4" fill="7" visible="no" active="no"/>
+<layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
+<layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
@@ -184,6 +198,27 @@ Source:  Fairchild Semiconductor International ssot6_dim.pdf&lt;br&gt;
 <wire x1="-0.73151875" y1="1.005840625" x2="3.76848125" y2="1.005840625" width="0.127" layer="21"/>
 <wire x1="3.76848125" y1="3.505840625" x2="3.76848125" y2="1.005840625" width="0.127" layer="21"/>
 </package>
+<package name="SOP8">
+<description>時々&lt;b&gt;SOIC&lt;/b&gt;と表記されていることがある。&lt;br&gt;
+&lt;b&gt;データシート&lt;/b&gt;を見て、半導体の幅を確認して問題ないか見ること&lt;br&gt;
+&lt;b&gt;幅3.9mm</description>
+<wire x1="0" y1="0" x2="5.1" y2="0" width="0.127" layer="21"/>
+<wire x1="5.1" y1="0" x2="5.1" y2="-3.95" width="0.127" layer="21"/>
+<wire x1="5.1" y1="-3.95" x2="0" y2="-3.95" width="0.127" layer="21"/>
+<wire x1="0" y1="-3.95" x2="0" y2="0" width="0.127" layer="21"/>
+<smd name="PIN8" x="0.65" y="0.62" dx="1.2" dy="0.8" layer="1" rot="R90"/>
+<smd name="PIN7" x="1.92" y="0.62" dx="1.2" dy="0.8" layer="1" rot="R90"/>
+<smd name="PIN6" x="3.19" y="0.62" dx="1.2" dy="0.8" layer="1" rot="R90"/>
+<smd name="PIN5" x="4.46" y="0.62" dx="1.2" dy="0.8" layer="1" rot="R90"/>
+<smd name="PIN1" x="0.65" y="-4.57" dx="1.2" dy="0.8" layer="1" rot="R90"/>
+<smd name="PIN2" x="1.92" y="-4.57" dx="1.2" dy="0.8" layer="1" rot="R90"/>
+<smd name="PIN3" x="3.19" y="-4.57" dx="1.2" dy="0.8" layer="1" rot="R90"/>
+<smd name="PIN4" x="4.46" y="-4.57" dx="1.2" dy="0.8" layer="1" rot="R90"/>
+<circle x="0.889" y="-3.048" radius="0.359209375" width="0.127" layer="21"/>
+<text x="0" y="2.54" size="1.27" layer="25">&gt;NAME</text>
+<text x="0" y="-7.62" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="0" y1="-3.81" x2="5.08" y2="0" layer="39"/>
+</package>
 </packages>
 <symbols>
 <symbol name="FET">
@@ -266,6 +301,22 @@ Source:  Fairchild Semiconductor International ssot6_dim.pdf&lt;br&gt;
 <pin name="B" x="-2.54" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
 <pin name="E" x="2.54" y="-5.08" visible="off" length="short" direction="pas" swaplevel="3" rot="R90"/>
 <pin name="C" x="2.54" y="5.08" visible="off" length="short" direction="pas" swaplevel="2" rot="R270"/>
+</symbol>
+<symbol name="FDS4935A">
+<pin name="1_S2" x="-15.24" y="7.62" length="middle"/>
+<pin name="2_G2" x="-15.24" y="2.54" length="middle"/>
+<pin name="3_S1" x="-15.24" y="-2.54" length="middle"/>
+<pin name="4_G1" x="-15.24" y="-7.62" length="middle"/>
+<pin name="5_D1" x="15.24" y="-7.62" length="middle" rot="R180"/>
+<pin name="6_D1" x="15.24" y="-2.54" length="middle" rot="R180"/>
+<pin name="7_D2" x="15.24" y="2.54" length="middle" rot="R180"/>
+<pin name="8_D2" x="15.24" y="7.62" length="middle" rot="R180"/>
+<wire x1="-10.16" y1="10.16" x2="-10.16" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-10.16" x2="10.16" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-10.16" x2="10.16" y2="10.16" width="0.254" layer="94"/>
+<wire x1="10.16" y1="10.16" x2="-10.16" y2="10.16" width="0.254" layer="94"/>
+<text x="-5.08" y="12.7" size="1.778" layer="95">&gt;NAME</text>
+<text x="-5.08" y="-15.24" size="1.778" layer="96">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -410,6 +461,30 @@ Source:  Fairchild Semiconductor International ssot6_dim.pdf&lt;br&gt;
 <connect gate="G$1" pin="PIN1_G" pad="PIN1"/>
 <connect gate="G$1" pin="PIN2_D" pad="PIN2"/>
 <connect gate="G$1" pin="PIN3_S" pad="PIN3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="FDS4935A" prefix="IC" uservalue="yes">
+<description>&lt;b&gt;デュアルPchMOSFET on抵抗19mΩ　DS_max電圧-30v GS_max電圧20v&lt;/b&gt;&lt;br&gt;
+秋月電子通商通販コード[I-01246]</description>
+<gates>
+<gate name="G$1" symbol="FDS4935A" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOP8">
+<connects>
+<connect gate="G$1" pin="1_S2" pad="PIN1"/>
+<connect gate="G$1" pin="2_G2" pad="PIN2"/>
+<connect gate="G$1" pin="3_S1" pad="PIN3"/>
+<connect gate="G$1" pin="4_G1" pad="PIN4"/>
+<connect gate="G$1" pin="5_D1" pad="PIN5"/>
+<connect gate="G$1" pin="6_D1" pad="PIN6"/>
+<connect gate="G$1" pin="7_D2" pad="PIN7"/>
+<connect gate="G$1" pin="8_D2" pad="PIN8"/>
 </connects>
 <technologies>
 <technology name=""/>
