@@ -137,8 +137,7 @@
 </package>
 <package name="SSOT6" urn="urn:adsk.eagle:footprint:28517/1" locally_modified="yes">
 <description>&lt;b&gt;SuperSOT-6&lt;/b&gt;&lt;p&gt;
-Source:  Fairchild Semiconductor International ssot6_dim.pdf&lt;br&gt;
-  September 1998, Rev. A</description>
+sot23-6も含まれる</description>
 <wire x1="-1.4" y1="0.75" x2="1.4" y2="0.75" width="0.2032" layer="51"/>
 <wire x1="1.4" y1="0.75" x2="1.4" y2="-0.75" width="0.2032" layer="21"/>
 <wire x1="1.4" y1="-0.75" x2="-1.4" y2="-0.75" width="0.2032" layer="51"/>
@@ -372,8 +371,9 @@ Source:  Fairchild Semiconductor International ssot6_dim.pdf&lt;br&gt;
 </device>
 </devices>
 </deviceset>
-<deviceset name="SSOT6_FET">
-<description>sot23-6も含まれる</description>
+<deviceset name="FDC6305">
+<description>&lt;b&gt;デュアルNchMOSFET ゲート・ソース間絶対最大定格8v&lt;/b&gt;&lt;br&gt;
+秋月電子通商通販コード[I-06003]</description>
 <gates>
 <gate name="G$1" symbol="SSOT6_FET" x="-10.16" y="0"/>
 </gates>

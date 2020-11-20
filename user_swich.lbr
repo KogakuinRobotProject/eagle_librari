@@ -73,8 +73,8 @@
 <package name="TAKUTOSUITTI2">
 <smd name="P$1" x="0" y="0" dx="1.6" dy="1.05" layer="1" rot="R90"/>
 <smd name="P$2" x="4.45" y="0" dx="1.6" dy="1.05" layer="1" rot="R90"/>
-<pad name="P$3" x="2.225" y="-0.9" drill="0.75"/>
-<pad name="P$4" x="2.225" y="0.9" drill="0.75"/>
+<pad name="NC" x="2.225" y="-0.9" drill="0.75"/>
+<pad name="NC@2" x="2.225" y="0.9" drill="0.75"/>
 <wire x1="0.2794" y1="1.4522" x2="0.2794" y2="-1.4478" width="0.127" layer="21"/>
 <wire x1="0.2794" y1="-1.4478" x2="4.1794" y2="-1.4478" width="0.127" layer="21"/>
 <wire x1="4.1794" y1="-1.4478" x2="4.1794" y2="1.4522" width="0.127" layer="21"/>
@@ -97,11 +97,12 @@
 </packages>
 <symbols>
 <symbol name="TAKUTOSUITTI2">
-<pin name="PIN1" x="-12.7" y="0" length="middle"/>
-<pin name="PIN2" x="12.7" y="0" length="middle" rot="R180"/>
-<wire x1="-7.62" y1="0" x2="7.62" y2="2.54" width="0.254" layer="94"/>
-<pin name="NC" x="-5.08" y="-2.54" length="middle" rot="R270"/>
-<pin name="NC@2" x="2.54" y="5.08" length="middle" rot="R90"/>
+<pin name="NC" x="2.54" y="2.54" length="short" rot="R90"/>
+<pin name="PIN1" x="-2.54" y="-2.54" length="point" rot="R180"/>
+<pin name="PIN2" x="5.08" y="-2.54" length="point"/>
+<wire x1="-2.54" y1="-2.54" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-2.54" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="2.54" y2="0" width="0.254" layer="94"/>
 </symbol>
 <symbol name="TOGURUSUIITI">
 <pin name="1" x="0" y="5.08" visible="off" length="point"/>
@@ -150,14 +151,15 @@
 </devices>
 </deviceset>
 <deviceset name="TAKUTOSUITTI2">
+<description>&lt;b&gt;表面実装タクトスイッチ&lt;/b&gt;&lt;br&gt;
+秋月電子通称通販コード[P-14888]</description>
 <gates>
 <gate name="G$1" symbol="TAKUTOSUITTI2" x="0" y="0"/>
 </gates>
 <devices>
 <device name="" package="TAKUTOSUITTI2">
 <connects>
-<connect gate="G$1" pin="NC" pad="P$4"/>
-<connect gate="G$1" pin="NC@2" pad="P$3"/>
+<connect gate="G$1" pin="NC" pad="NC NC@2"/>
 <connect gate="G$1" pin="PIN1" pad="P$1"/>
 <connect gate="G$1" pin="PIN2" pad="P$2"/>
 </connects>
