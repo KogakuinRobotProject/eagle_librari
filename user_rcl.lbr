@@ -367,7 +367,7 @@ http://www.bccomponents.com/</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="C_DEKAI">
+<deviceset name="C_DEKAI" prefix="CPOL">
 <gates>
 <gate name="G$1" symbol="CAPA_KYOKUSEI" x="0" y="0"/>
 </gates>
